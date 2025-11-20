@@ -5,13 +5,12 @@ import './App.css'
 const App = () => {
   
  
-  // Holds an array of fighters added to the team
-
-  const [team, setTeam] = useState([]);
+  
+  const [team, setTeam] = useState([]); //fighters added to team
   
 
-  // Tracks how much money you have to buy fighters
-  // Starts at 100
+  // tracks how much money you have to buy fighters
+  // starts at $100
   const [money, setMoney] = useState(100);
   
  
@@ -102,14 +101,13 @@ const App = () => {
 
   
 
-  // adds the fighter to your team and removes them from available fighters
+  // adds the fighter to your team and removes them from available fighters section
   const handleAddFighter = (fighter) => {
-    // Check if you have enough money to buy this fighter
+    // check if you have enough money to buy this fighter
     if (money < fighter.price) {
-      // If not enough money, log a message and stop
+      // If not enough money, logs a message and stop
       console.log('Not enough money');
-      return; // Exit the function early
-    }
+      return; // exits
     
     //add the new fighter to your team
 
